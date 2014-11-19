@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="HIPPO : An iterative re-parametrization method for identification and calibration of dynamic models, written in MATLAB">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>HIPPO</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/BenjaSanchez/HIPPO">View on GitHub</a>
+
+          <h1 id="project_title">HIPPO</h1>
+          <h2 id="project_tagline">An iterative re-parametrization method for identification and calibration of dynamic models, written in MATLAB</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/BenjaSanchez/HIPPO/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/BenjaSanchez/HIPPO/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="hippo" class="anchor" href="#hippo" aria-hidden="true"><span class="octicon octicon-link"></span></a>HIPPO</h1>
+
+<p>HIPPO (Heuristic Iterative Procedure for Parameter Optimization) is the companion software of the publication:</p>
+
+<p>Benjamín J. Sánchez, Daniela C. Soto, Héctor Jorquera, Claudio A. Gelmi, José R. Pérez-Correa. HIPPO: An iterative reparametrization method for identification and calibration of dynamic bioreactor models of complex processes. Industrial &amp; Engineering Chemistry Research. (<a href="http://www.dx.doi.org/10.1021/ie501298b">http://www.dx.doi.org/10.1021/ie501298b</a>)</p>
+
+<p>HIPPO was programmed by Benjamín J. Sánchez (<a href="https://github.com/BenjaSanchez" class="user-mention">@BenjaSanchez</a>), excluding the functions identifica, ksensibilidadBSB and intconfianzaBSB, that were programmed by Dr. Claudio Gelmi (<a href="http://www.systemsbiology.cl">www.systemsbiology.cl</a>), Engineering School, Pontificia Universidad Católica de Chile.</p>
+
+<p>HIPPO is available for free at <a href="http://www.systemsbiology.cl/tools/">http://www.systemsbiology.cl/tools/</a> No technical support is provided for its use.</p>
+
+<p>Last update: 2014-11-19</p>
+
+<h1></h1>
+
+<h2>
+<a id="required-software" class="anchor" href="#required-software" aria-hidden="true"><span class="octicon octicon-link"></span></a>Required Software:</h2>
+
+<ul>
+<li>MATLAB (7.5 or higher) + Optimization Toolbox.</li>
+<li>Scatter Search for MATLAB (SSm, available free of charge for academic users at <a href="http://www.iim.csic.es/%7Egingproc/ssmGO.html">http://www.iim.csic.es/~gingproc/ssmGO.html</a>)</li>
+</ul>
+
+<h2>
+<a id="functions-included" class="anchor" href="#functions-included" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions Included:</h2>
+
+<h3>
+<a id="functions-you-have-to-modify-instructions-in-each-m-file" class="anchor" href="#functions-you-have-to-modify-instructions-in-each-m-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions you have to modify (instructions in each .m file):</h3>
+
+<p>load_problem.m</p>
+
+<ul>
+<li>model.m</li>
+<li>obj_var.m</li>
+<li>permited_it.m</li>
+<li>plotResults.m</li>
+<li>You also need to have a file with the experimental data, and you can also add more .m files if your code uses them.</li>
+</ul>
+
+<h3>
+<a id="functions-you-should-not-modify" class="anchor" href="#functions-you-should-not-modify" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions you should NOT modify:</h3>
+
+<ul>
+<li>HIPPO.m</li>
+<li>add_it.m</li>
+<li>iteration.m</li>
+<li>obj_func.m</li>
+<li>solve_ODE.m</li>
+<li>reg_analysis.m</li>
+<li>lsq_func.m</li>
+<li>decision.m</li>
+<li>find_best.m</li>
+</ul>
+
+<h3>
+<a id="functions-you-cannot-modify-they-are-in-protected-form" class="anchor" href="#functions-you-cannot-modify-they-are-in-protected-form" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions you cannot modify (they are in protected form):</h3>
+
+<ul>
+<li>identifica.p</li>
+<li>ksensibilidadBSB.p</li>
+<li>intconfianzaBSB.p</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">HIPPO maintained by <a href="https://github.com/BenjaSanchez">BenjaSanchez</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
