@@ -8,7 +8,7 @@
 % ydata     Matrix with the experimental data (as loaded by the user).
 %
 % Benjamín J. Sánchez
-% Last Update: 2014-07-10
+% Last Update: 2014-11-19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function plotResults(k,texp,ydata)
@@ -64,8 +64,11 @@ subplot(3,2,6); % Starch
 hold on
 plot(tmod,ymod(:,6),'-m','LineWidth',2);
 plot(texp,yexp(:,6),'ob','MarkerSize',3);
-axis([0 130 0 0.3]);
-xlabel('Time (h)'); ylabel('Starch (g/g.s.i.)');
+axis([0 130 0 0.3])
+xlabel('Time (h)')
+ylabel('Starch (g/g.s.i.)');
 hold off
+
+end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

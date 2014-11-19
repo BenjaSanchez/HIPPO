@@ -5,16 +5,16 @@
 % modified pending iterations group, and the modified tree and codes.
 %
 % Benjamín J. Sánchez
-% Last Update: 2013-05-31
+% Last Update: 2014-11-19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function it = add_it(it,last_results)
 
-all_it = [it.past;it.pending];  %Past + pending iterations
+all_it = [it.past;it.pending];  % Past + pending iterations
 [N,~]  = size(all_it);
 repeated_it = false;
 
-%Check if iteration is repeated in past_it or pending_it:
+% Check if iteration is repeated in past_it or pending_it:
 for j = 1:N
     R    = it.new - all_it(j,:);
     diff = sum(R.^2);
@@ -25,14 +25,14 @@ end
 
 if permited_it(it,last_results)
     if ~repeated_it
-        %Add iteration to pending group:
+        % Add iteration to pending group:
         it.pending = [it.pending;it.new];
-        %New iteration position:
+        % New iteration position:
         new_pos = N+1;
-        %Update iteration codes:
+        % Update iteration codes:
         it.codes{N+1,1} = it.new;
     else
-        %Find repeated iteration:
+        % Find repeated iteration:
         for i = 1:N
             R    = it.new - it.codes{i,1};
             diff = sum(R.^2);
@@ -41,7 +41,7 @@ if permited_it(it,last_results)
             end
         end
     end
-    %Find last iteration and update iteration tree:
+    % Find last iteration and update iteration tree:
     for i = 1:N
         R    = it.last - it.codes{i,1};
         diff = sum(R.^2);
@@ -49,6 +49,8 @@ if permited_it(it,last_results)
             it.tree(i,new_pos) = 1;
         end
     end
+end
+
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

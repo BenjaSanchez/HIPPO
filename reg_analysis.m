@@ -5,24 +5,24 @@
 % Returns all the different regression analysis outputs.
 %
 % Benjamín J. Sánchez
-% Last Update: 2014-07-17
+% Last Update: 2014-11-19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function [AICc,BIC,CI,CC,Mc,sensib_prom,diff] = reg_analysis(k)
+function [AICc,BIC,CI,CC,Mc,Ms,diff] = reg_analysis(k)
 
-%Load experimental data:
+% Load experimental data
 texp     = evalin('base','texp');
 ydata    = evalin('base','ydata');
 [~,xmod] = solve_ODE(k,texp);
 [~,yexp] = obj_var(xmod,ydata);
 
-%Jacobian and residual calculations using lsqcurvefit:
+% Jacobian and residual calculations using lsqcurvefit
 kL = k.*0.9999999999;
 kU = k.*1.0000000001 + ones(1,length(k))*1e-15;
 [k2,~,res,~,~,~,Jac] = lsqcurvefit(@lsq_func,k,texp,yexp,kL,kU);
 diff = sum((k-k2).^2);
 
-%AIC & BIC calculations:
+% AIC & BIC calculations
 SS    = sum(sum(res.^2));
 m     = length(k2);
 [N,~] = size(res);
@@ -30,7 +30,7 @@ AIC   = N*log(SS/N)+2*(m+1);
 AICc  = AIC + 2*(m+1)*(m+2)/(N-m-2);
 BIC   = SS/N + m*log(N);
 
-%Confidence intervals:
+% Confidence intervals
 [CI,CC] = intconfianza(Jac,res,k2,0.05);
 CC      = CC./100;
 disp('Insignificant Parameters:');
@@ -42,15 +42,17 @@ for i = 1:m
     end
 end
 
-%Identifiability analysis:
+% Identifiability analysis
 x0 = evalin('base','x0');
 U  = evalin('base','U');
 Mc = identificaBSB(1:length(x0),k,x0,texp,@model,U,0);
 set(0,'ShowHiddenHandles','on');delete(get(0,'Children'))
 
-%Sensitivity analysis:
+% Sensitivity analysis
 ksensibilidadBSB(1:length(x0),k,x0,texp,@model,3,0)
-sensib_prom = load('GraficoBarra.txt');
+Ms = load('GraficoBarra.txt');
 set(0,'ShowHiddenHandles','on');delete(get(0,'Children'))
+
+end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

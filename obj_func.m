@@ -7,23 +7,25 @@
 % estimation with SSm.
 %
 % Benjamín J. Sánchez
-% Last Update: 2013-06-07
+% Last Update: 2014-11-19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function [J,g,R]=obj_func(k,texp,ydata)
+function [J,g,R] = obj_func(k,texp,ydata)
 
-%Resolution of ODEs:
+% Resolution of ODEs:
 [~,xmod] = solve_ODE(k,texp);
 
-%Construction of residual matrix:
+% Construction of residual matrix:
 [ymod,yexp] = obj_var(xmod,ydata);
 R = ymod - yexp;
 
-%Calculation of the objective function:
+% Calculation of the objective function:
 J = sum(sum(R.^2));
 disp(['J = ' num2str(J)]);
 
-R=reshape(R,numel(R),1);
-g=0;
+R = reshape(R,numel(R),1);
+g = 0;
+
+end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

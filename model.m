@@ -16,14 +16,14 @@
 % parameters).
 %
 % Benjamín J. Sánchez
-% Last Update: 2014-07-10
+% Last Update: 2014-11-19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function dx = model(t,x,k)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%DO NOT MODIFY THIS SECTION
-dx = zeros(8,1);
+% DO NOT MODIFY THIS SECTION
+dx = zeros(length(x),1);
 
 kfixed = evalin('base','kfixed');
 p = zeros(length(kfixed));
@@ -83,5 +83,7 @@ dx(6) = mu*x(1)/yxo2+mo2*x(1);
 dx(7) = beta*x(1)-kp*x(7);
 % Starch:
 dx(8) = -mu*x(1)/yxs-ms*x(1);
+
+end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

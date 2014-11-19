@@ -4,18 +4,20 @@
 % used for lsqcurvefit.
 %
 % Benjamín J. Sánchez
-% Last Update: 2013-06-07
+% Last Update: 2014-11-19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function ymod = lsq_func(k,texp)
 
-%Load experimental data:
+% Load experimental data:
 ydata = evalin('base','ydata');
 
-%Resolution of ODEs:
+% Resolution of ODEs:
 [~,xmod] = solve_ODE(k,texp);
 
-%Return de normalized measured variables:
+% Return de normalized measured variables:
 [ymod,~] = obj_var(xmod,ydata);
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

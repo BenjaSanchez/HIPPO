@@ -5,7 +5,7 @@
 % Returns a vector with the parameters to be fixed.
 %
 % Benjamín J. Sánchez
-% Last Update: 2014-07-10
+% Last Update: 11/18/2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function ktofix = decision(CC,Mc,Ms)
@@ -17,7 +17,7 @@ m      = length(kfixed);
 Mc2    = zeros(m,m);
 Ms2    = ones(m,n);
 
-%Construct kf (row vector with 1 if parameter is fixed and 0 otherwise).
+% Construct kf (row vector with 1 if parameter is fixed and 0 otherwise).
 kf = zeros(1,m);
 for i = 1:m
     if ~isnan(kfixed(i))
@@ -25,8 +25,8 @@ for i = 1:m
     end    
 end
 
-%Modify correlation matrix (Mc) and sensitivity matrix (Ms) to include
-%zeros and ones in the fixed parameters position, respectively.
+% Modify correlation matrix (Mc) and sensitivity matrix (Ms) to include
+% zeros and ones in the fixed parameters position, respectively.
 for i = 1:m
     if kf(i) == 0
         for j = 1:m
@@ -38,10 +38,10 @@ for i = 1:m
     end    
 end
 
-%Construct ktofix (1 if analized parameter should be fixed and 0 otherwise).
+% Construct ktofix (1 if analized parameter should be fixed and 0 otherwise).
 ktofix = zeros(1,m);
 for i = 1:m
-    %Sensitivity:
+    % Sensitivity:
     sensitive = false;
     for j = 1:n
         if Ms2(i,j) >= 0.01;
@@ -52,7 +52,7 @@ for i = 1:m
         ktofix(i) = 1;
     end
     
-    %Identifiability:
+    % Identifiability:
     for j = 1:m
         if abs(Mc2(i,j)) >= T && i ~= j
             ktofix(i) = 1;
@@ -60,10 +60,8 @@ for i = 1:m
         end
     end
     
-    %Significance:
+    % Significance:
     if CC(i) >= 2
         ktofix(i) = 1;
     end
 end
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -16,21 +16,23 @@
 % NOTE: Perform any normalization or weighting here (to ymod and yexp).
 %
 % Benjamín J. Sánchez
-% Last Update: 2013-06-07
+% Last Update: 2014-11-19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function [ymod,yexp] = obj_var(xmod,ydata)
 
-%Construction of the measured variables from the model:
+% Construction of the measured variables from the model:
 ymod = xmod(:,[2,4:8]);
 
-%Construction of measured experimental variables:
+% Construction of measured experimental variables:
 [N,n] = size(ymod);
 yexp  = zeros(N,n);
 for i = 1:n
-    %Normalization using maximum measure:
+    % Normalization using maximum measure:
     yexp(:,i) = ydata(:,i)./max(ydata(:,i));
     ymod(:,i) = ymod(:,i)./max(ydata(:,i));
+end
+
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

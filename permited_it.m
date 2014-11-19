@@ -16,16 +16,16 @@
 % parameter is fixed, and zeros if the parameter is still free.
 %
 % Benjamín J. Sánchez
-% Last Update: 2014-07-17
+% Last Update: 2014-11-19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function answer = permited_it(it,last_results)
 
-%Ignore solutions with unexpected sensitivity outputs:
+% Ignore solutions with unexpected sensitivity outputs:
 if max(max(last_results.Ms)) >= 10
     answer = false;
     
-%Problem-specific constraints (solid-substrate fermentation):
+% Problem-specific constraints (solid-substrate fermentation):
 elseif it.new(3) == 1
     answer = false;
 elseif it.new(1) + it.new(8) == 2
@@ -34,7 +34,7 @@ elseif it.new(6) + it.new(11) + it.new(12) == 3
     answer = false;
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%DO NOT MODIFY THIS SECTION
+% DO NOT MODIFY THIS SECTION
 else
     U      = evalin('base','U');
     answer = true;
@@ -59,4 +59,7 @@ else
     end
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+end
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -3,11 +3,12 @@ HIPPO
 
 HIPPO (Heuristic Iterative Procedure for Parameter Optimization) is the companion software of the publication:
 
-Benjamín J. Sánchez, Daniela C. Soto, Héctor Jorquera, Claudio A. Gelmi, José R. Pérez-Correa. HIPPO: An iterative re-parameterization method for identification and calibration of dynamic bioreactor models of complex processes. Industrial & Engineering Chemistry Research.
+Benjamín J. Sánchez, Daniela C. Soto, Héctor Jorquera, Claudio A. Gelmi, José R. Pérez-Correa. HIPPO: An iterative reparametrization method for identification and calibration of dynamic bioreactor models of complex processes. Industrial & Engineering Chemistry Research. (http://www.dx.doi.org/10.1021/ie501298b)
 
-HIPPO was programmed by Benjamín J. Sánchez, excluding the functions identifica.p, ksensibilidadBSB.p and intconfianzaBSB.p, that were programmed by Dr. Claudio Gelmi (www.systemsbiology.cl).
 
-HIPPO is available for free at http://www.systemsbiology.cl/tools/
+HIPPO was programmed by Benjamín J. Sánchez, excluding the functions identifica, ksensibilidadBSB and intconfianzaBSB, that were programmed by Dr. Claudio Gelmi (www.systemsbiology.cl), Engineering School, Pontificia Universidad Católica de Chile.
+
+HIPPO is available for free at http://www.systemsbiology.cl/tools/ No technical support is provided for its use.
 
 Last update: 2014-11-19
 
@@ -15,14 +16,14 @@ Last update: 2014-11-19
 
 ## Required Software:
 
-* MATLAB (7.5 or higher) + Optimization Toolbox
+* MATLAB (7.5 or higher) + Optimization Toolbox.
 * Scatter Search for MATLAB (SSm, available free of charge for academic users at http://www.iim.csic.es/~gingproc/ssmGO.html)
 
 ## Functions Included:
 
 ### Functions you have to modify (instructions in each .m file):
 
-* load_problem.m
+load_problem.m
 * model.m
 * obj_var.m
 * permited_it.m
@@ -41,6 +42,7 @@ Last update: 2014-11-19
 * lsq_func.m
 * decision.m
 * find_best.m
+
 
 ### Functions you cannot modify (they are in protected form):
 
