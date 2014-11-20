@@ -14,12 +14,12 @@ Last update: 2014-11-20
 
 ========================
 
-
 ## Required Software:
 
 * MATLAB (7.5 or higher) + Optimization Toolbox.
 * Scatter Search for MATLAB (SSm, available free of charge for academic users at http://www.iim.csic.es/~gingproc/ssmGO.html)
 
+========================
 
 ## Functions Included:
 
