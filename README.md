@@ -23,7 +23,7 @@ Last update: 2014-11-19
 
 ### Functions you have to modify (instructions in each .m file):
 
-load_problem.m
+* load_problem.m
 * model.m
 * obj_var.m
 * permited_it.m
