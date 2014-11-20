@@ -3,21 +3,23 @@ HIPPO
 
 HIPPO (Heuristic Iterative Procedure for Parameter Optimization) is the companion software of the publication:
 
-Benjamín J. Sánchez, Daniela C. Soto, Héctor Jorquera, Claudio A. Gelmi, José R. Pérez-Correa. HIPPO: An iterative reparametrization method for identification and calibration of dynamic bioreactor models of complex processes. Industrial & Engineering Chemistry Research. (http://www.dx.doi.org/10.1021/ie501298b)
+_BenjamÃ­n J. SÃ¡nchez, Daniela C. Soto, HÃ©ctor Jorquera, Claudio A. Gelmi, JosÃ© R. PÃ©rez-Correa. HIPPO: An iterative reparametrization method for identification and calibration of dynamic bioreactor models of complex processes. Industrial & Engineering Chemistry Research._ (http://www.dx.doi.org/10.1021/ie501298b)
 
 
-HIPPO was programmed by Benjamín J. Sánchez (@BenjaSanchez), excluding the functions identifica, ksensibilidadBSB and intconfianzaBSB, that were programmed by Dr. Claudio Gelmi (www.systemsbiology.cl), Engineering School, Pontificia Universidad Católica de Chile.
+HIPPO was programmed by BenjamÃ­n J. SÃ¡nchez (@BenjaSanchez), excluding the functions identifica, ksensibilidadBSB and intconfianzaBSB, that were programmed by Dr. Claudio Gelmi (www.systemsbiology.cl), Engineering School, Pontificia Universidad CatÃ³lica de Chile.
 
 HIPPO is available for free at http://www.systemsbiology.cl/tools/ No technical support is provided for its use.
 
-Last update: 2014-11-19
+Last update: 2014-11-20
 
 ========================
+
 
 ## Required Software:
 
 * MATLAB (7.5 or higher) + Optimization Toolbox.
 * Scatter Search for MATLAB (SSm, available free of charge for academic users at http://www.iim.csic.es/~gingproc/ssmGO.html)
+
 
 ## Functions Included:
 
@@ -30,7 +32,6 @@ Last update: 2014-11-19
 * plotResults.m
 * You also need to have a file with the experimental data, and you can also add more .m files if your code uses them.
 
-
 ### Functions you should NOT modify:
 
 * HIPPO.m
@@ -42,7 +43,6 @@ Last update: 2014-11-19
 * lsq_func.m
 * decision.m
 * find_best.m
-
 
 ### Functions you cannot modify (they are in protected form):
 
