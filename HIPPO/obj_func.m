@@ -1,10 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % obj_func
 % Integrates the dynamic model and calculates afterwards the cuadratic 
-% difference between the model predictions and the experimental data,
-% normalized by the maximum value of the experimental data. Returns the
-% cuadratic difference (objective function). To be used in the parameter
-% estimation with SSm.
+% difference between the model predictions and the experimental data.
+% Returns the cuadratic difference (objective function). To be used in the
+% parameter estimation with SSm.
 %
 % Benjamín J. Sánchez
 % Last Update: 2014-11-19
