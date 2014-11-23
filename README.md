@@ -8,7 +8,7 @@ _Benjamín J. Sánchez, Daniela C. Soto, Héctor Jorquera, Claudio A. Gelmi, José R
 
 HIPPO was programmed by Benjamí­n J. Sánchez (@BenjaSanchez), excluding the functions identifica, ksensibilidadBSB and intconfianzaBSB, that were programmed by Dr. Claudio Gelmi (www.systemsbiology.cl), Engineering School, Pontificia Universidad Católica de Chile.
 
-HIPPO is available for free at http://www.systemsbiology.cl/tools/ No technical support is provided for its use.
+HIPPO is available for free (for academic or non commercial purposes only) at http://www.systemsbiology.cl/tools/ No technical support is provided for its use.
 
 Last update: 2014-11-20
 
