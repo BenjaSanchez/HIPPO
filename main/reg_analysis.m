@@ -1,14 +1,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % reg_analysis
 % Performs al the regression analysis for a parameter set: significance,
-% sensitivity and identifiability analysis, and BIC and AICc calculations.
+% sensitivity and identifiability analysis, and AICc calculations.
 % Returns all the different regression analysis outputs.
 %
 % Benjamín J. Sánchez
 % Last Update: 2014-11-19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function [AICc,BIC,CI,CC,Mc,Ms,diff] = reg_analysis(k)
+function [AICc,CI,CC,Mc,Ms,diff] = reg_analysis(k)
 
 % Load experimental data
 texp     = evalin('base','texp');
@@ -28,7 +28,6 @@ m     = length(k2);
 [N,~] = size(res);
 AIC   = N*log(SS/N)+2*(m+1);
 AICc  = AIC + 2*(m+1)*(m+2)/(N-m-2);
-BIC   = SS/N + m*log(N);
 
 % Confidence intervals
 [CI,CC] = intconfianza(Jac,res,k2,0.05);
