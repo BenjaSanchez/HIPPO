@@ -3,7 +3,7 @@ HIPPO
 
 HIPPO (Heuristic Iterative Procedure for Parameter Optimization) is the companion software of the publication:
 
-_Benjamín J. Sánchez, Daniela C. Soto, Héctor Jorquera, Claudio A. Gelmi, José R. Pérez-Correa (2014). HIPPO: An iterative reparametrization method for identification and calibration of dynamic bioreactor models of complex processes. Industrial & Engineering Chemistry Research. 53(48):18514 - 18525_ (http://www.dx.doi.org/10.1021/ie501298b)
+_Benjamín J. Sánchez, Daniela C. Soto, Héctor Jorquera, Claudio A. Gelmi, José R. Pérez-Correa (2014). HIPPO: An iterative reparametrization method for identification and calibration of dynamic bioreactor models of complex processes. Industrial & Engineering Chemistry Research. 53(48): 18514 - 18525_ (http://www.dx.doi.org/10.1021/ie501298b)
 
 
 HIPPO was programmed by Benjamí­n J. Sánchez (@BenjaSanchez), excluding the functions identifica, ksensibilidadBSB and intconfianzaBSB, that were programmed by Dr. Claudio Gelmi (www.systemsbiology.cl), Engineering School, Pontificia Universidad Católica de Chile.
