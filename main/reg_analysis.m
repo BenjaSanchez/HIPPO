@@ -4,7 +4,7 @@
 % sensitivity and identifiability analysis, and AICc calculations.
 % Returns all the different regression analysis outputs.
 %
-% Benjamín J. Sánchez
+% BenjamÃ­n J. SÃ¡nchez
 % Last Update: 2014-11-19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -22,7 +22,7 @@ kU = k.*1.0000000001 + ones(1,length(k))*1e-15;
 [k2,~,res,~,~,~,Jac] = lsqcurvefit(@lsq_func,k,texp,yexp,kL,kU);
 diff = sum((k-k2).^2);
 
-% AIC & BIC calculations
+% AIC & AICc calculations
 SS    = sum(sum(res.^2));
 m     = length(k2);
 [N,~] = size(res);
