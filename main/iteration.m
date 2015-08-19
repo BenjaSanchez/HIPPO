@@ -6,7 +6,7 @@
 % next iteration. Returns the parameters to be fixed (ktofix) and the
 % iteration results (it_results).
 %
-% Benjamín J. Sánchez
+% BenjamÃ­n J. SÃ¡nchez
 % Last Update: 2014-11-19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -62,7 +62,7 @@ plotResults(k_SSm,texp,ydata);
 %========================= REGRESSION ANALYSIS ========================
 
 close all
-[AICc,BIC,CI,CC,Mc,Ms,diff] = reg_analysis(k_SSm);
+[AICc,CI,CC,Mc,Ms,diff] = reg_analysis(k_SSm);
 
 %========================= SAVE RESULTS ===============================
 
@@ -92,7 +92,6 @@ results_it.k_SSm  = k_SSm;
 results_it.CPU_time = CPU_time;
 results_it.J_SSm = J_SSm;
 results_it.AICc = AICc;
-results_it.BIC = BIC;
 results_it.CI = CI;
 results_it.CC = CC;
 results_it.Mc = Mc;
