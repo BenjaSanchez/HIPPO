@@ -100,7 +100,7 @@ results_it.diff = diff;
 results_it.ktofix = ktofix;
 results_it.Results = Results;
 
-% Delete unnecesary files:
+% Delete unnecessary files:
 delete('Sensib*')
 delete('ssm_report.mat')
 delete('Mc.txt')
